@@ -1,4 +1,4 @@
-# IP calculator
+# Temperature converter
 
 ![Clean & Simple Design](showcase.png)
 
