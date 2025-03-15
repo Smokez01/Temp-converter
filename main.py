@@ -4,7 +4,7 @@ import tkinter.messagebox as messagebox
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
-def convert_temperature():
+def convert_temperature(event=None):
     temp_str = temp_entry.get().strip()
     scale = scale_option.get()
     try:
@@ -51,6 +51,8 @@ temp_label = ctk.CTkLabel(frame, text="Temperature:", font=("Helvetica", 12))
 temp_label.pack(pady=(10, 5))
 temp_entry = ctk.CTkEntry(frame, width=200, font=("Helvetica", 12), placeholder_text="Enter temperature")
 temp_entry.pack(pady=(0, 10))
+# Bind Enter-Taste im Eingabefeld
+temp_entry.bind("<Return>", convert_temperature)
 
 scale_label = ctk.CTkLabel(frame, text="Scale:", font=("Helvetica", 12))
 scale_label.pack(pady=(10, 5))
